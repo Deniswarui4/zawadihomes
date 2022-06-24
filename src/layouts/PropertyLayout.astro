@@ -1,0 +1,55 @@
+---
+const {content} = Astro.props;
+const { title, description } = Astro.props;
+---
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{title}</title>
+</head>
+<body>
+	<header class="bg-cover bg-center w-full h-96" style="background-image: url(/zawadihomes-header.jpg)">
+		<div class="h-96 backdrop-blur-sm backdrop-brightness-50 bg-black/30k">
+			<nav>
+				<div class="max-w-screen-lg p-4 mx-auto flex items-center justify-between">
+					<a class="font-bold text-lg text-white" href="/">ZawadiHomes</a>
+
+					<ul class="flex items-center space-x-4 text-sm font-medium text-white">
+						<li class="hidden lg:block"><a href="/">Home</a></li>
+						<li><a href="/">Properties</a></li>
+						<li><a class="inline-flex items-center" href="https://flutterwave.com/pay/as1yd4ospirv" target="_blank">Test Link
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+						stroke="currentColor"
+						class="ml-1.5 w-4 h-4">
+						<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+						></path></svg></a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<section>
+				<div class="max-w-screen-md mx-auto px-4 py-20 text-center text-white">
+					<h1 class="font-bold text-6xl">{title}</h1>
+					<p class="mt-2">{description}</p>
+				</div>
+			</section>
+		</div>
+	</header>
+	<main>
+		<slot />
+	</main>
+	<footer class="bg-teal-700">
+		<div class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 lg:px-8">
+			<div class="sm:flex sm:items-center sm:justify-between">
+				<p class="text-white">Ahadi Homes</p>
+				<p class="mt-4 text-sm text-center text-gray-400 lg:text-right lg:mt-0">Copyright &copy; 2022. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
